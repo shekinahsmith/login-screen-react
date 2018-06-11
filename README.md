@@ -11,7 +11,7 @@ I used this [login screen design](https://dribbble.com/shots/4612955-Recombee-Si
   #### Via NPM 
   - `nvm install 10`
   
-  ### Via Node 
+  #### Via Node 
   - Following these instructions [here](https://scotch.io/@vishalbiradar/how-to-install-specific-version-of-nodejs)
 3. Once you're on the correct node version, run `npm install`
 4. Use `npm start` to serve the site locally
