@@ -18,7 +18,7 @@ I used this [login screen design](https://dribbble.com/shots/4612955-Recombee-Si
 3. Once you're on the correct node version, run `npm install`
 4. Use `npm start` to serve the site locally
 
-###Functionality
+### Functionality
 You can create a **mostly functional user account or use an existing login.
 
 The following are the two pre-created users in the database.
@@ -38,7 +38,7 @@ If you choose to use a pre-exisiting user, on the welcome screen you should see 
 
 Alternatively, if you create a new account, and then sign in with the newly created account, you should also see the email and companyID for that new user on the welcome screen.
 
-###Browser Compatibility
+### Browser Compatibility
 - Chrome
 - Edge
 - Firefox
