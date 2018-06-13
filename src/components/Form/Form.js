@@ -22,7 +22,7 @@ class Form extends Component {
         label: "Company Name",
         value: "",
         validation: {
-          required: false,
+          required: true,
           minLength: 3
         },
         valid: false,
@@ -107,12 +107,11 @@ class Form extends Component {
     updatedInput.changed = true;
     updatedForm[inputId] = updatedInput;
 
-    let formValid = true;
-
-    if (inputId === "terms") {
-      formValid = formValid && updatedForm[inputId].checked;
+    let formValid = false;
+    if (this.props.existingUser) {
+      formValid = updatedForm.email.valid && updatedForm.password.valid;
     } else {
-      formValid = formValid && updatedForm[inputId].valid;
+      formValid = updatedForm.companyID.valid && updatedForm.email.valid && updatedForm.password.valid && updatedForm.terms.checked;
     }
 
     this.setState({
@@ -127,7 +126,7 @@ class Form extends Component {
     const updatedForm = { ...this.state.form };
     const updatedFormTerms = { ...updatedForm.terms };
 
-    if (updatedFormTerms.checked === false) {
+    if (updatedFormTerms.checked === false && !this.props.existingUser) {
       updatedFormTerms.triggerCheckError = true;
       updatedFormTerms.changed = false;
       updatedForm.terms = updatedFormTerms;
@@ -137,6 +136,7 @@ class Form extends Component {
       });
     }
 
+    console.log('submit form valid check', this.state.isFormValid);
     if (!this.state.isFormValid) {
       return;
     }
@@ -183,13 +183,13 @@ class Form extends Component {
 
     let formMessageAlert = 'You account has been created successfully. Please sign in.';
 
-    if (this.props.userNotFound) {
+    if (this.props.userNotFound && this.props.existingUser) {
       formMessageAlert = 'Email or password is invalid. Please try again.'
     }
 
     return (
       <Aux>
-        {this.props.userSignUpSuccess || this.props.userNotFound ? (
+        {(this.props.userSignUpSuccess && this.props.existingUser) || (this.props.userNotFound && this.props.existingUser) ? (
           <p className={classes.FormMessageAlert}>{formMessageAlert}</p>
         ) : null}
 

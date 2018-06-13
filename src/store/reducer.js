@@ -34,7 +34,8 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         isExistingUser: action.isExistingUser,
-        signUpSuccess: action.signUpSuccess
+        signUpSuccess: action.signUpSuccess,
+        userNotFound: action.userNotFound,
       };
 
     case actionTypes.USER_NOT_FOUND:

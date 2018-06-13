@@ -68,7 +68,8 @@ export const setNewUser = bool => {
   return {
     type: actionTypes.SET_NEW_USER,
     isExistingUser: true,
-    signUpSuccess: true
+    signUpSuccess: true,
+    userNotFound: false,
   };
 };
 
