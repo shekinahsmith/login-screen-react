@@ -12,6 +12,7 @@ I used this [login screen design](https://dribbble.com/shots/4612955-Recombee-Si
 2. Ensure that you're using Node 10(+)
   #### Via NPM 
   - `nvm install 10`
+  - `nvm use 10`
   
   #### Via Node 
   - Following these instructions [here](https://scotch.io/@vishalbiradar/how-to-install-specific-version-of-nodejs)
