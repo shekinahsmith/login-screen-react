@@ -1,0 +1,14 @@
+.Confirmation {
+  padding: 20px;
+  text-align: center;
+
+  & > .Logo {
+    margin: 0 auto;
+  }
+}
+
+.ConfirmationMessage {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 50px;
+}

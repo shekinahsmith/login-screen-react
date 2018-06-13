@@ -1,0 +1,52 @@
+.Submit,
+.Toggle {
+  cursor: pointer;
+}
+
+.Submit {
+  background-color: #3bc4a1;
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  display: block;
+  margin-bottom: 35px;
+  padding: 12px 10px;
+  width: 100%;
+
+  &:hover {
+    background-color: darken(#3bc4a1, 2%);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.23);
+  }
+}
+
+.Toggle {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  padding-bottom: 20px;
+  position: relative;
+
+  @media screen and (min-width: 641px) {
+    font-size: 18px;
+  }
+
+  &:hover,
+  &.Active {
+    font-weight: 700;
+
+    &:after {
+      background-color: #3bc4a1;
+      bottom: 0;
+      content: "";
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      width: 73px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

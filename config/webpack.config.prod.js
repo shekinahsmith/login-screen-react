@@ -228,7 +228,8 @@ module.exports = {
                     localIdentName: '[name]__[local]__[hash:64:5]'
                   }
                 },
-              'sass-loader'
+              'sass-loader',
+              'postcss-loader',
               ]
             })
           },

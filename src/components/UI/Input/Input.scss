@@ -1,0 +1,102 @@
+.InputWrapper {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.Label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.TextInput,
+.CustomCheckBox {
+  border: 1px solid #e2e4e4;
+}
+
+.TextInput {
+  border: 1px solid #e2e4e4;
+  border-radius: 3px;
+  padding: 10px 12px;
+  width: 100%;
+
+  &::placeholder {
+    color: #babdbd;
+  }
+
+  &:focus {
+    border-color: #3bc4a1;
+    outline: none;
+  }
+}
+
+.CompanyID {
+  color: #707d7d;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.CheckBox {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+
+  &:checked {
+    & ~ .CustomCheckBox {
+      border-color: #3bc4a1;
+      background-color: #3bc4a1;
+    }
+  }
+}
+
+.CustomCheckBox {
+  background-color: #fff;
+  display: inline-block;
+  height: 12px;
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 12px;
+}
+
+.CheckBoxLabel {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 12px;
+
+  &:hover {
+    .CustomCheckBox {
+      background-color: #3bc4a1;
+    }
+  }
+
+  a {
+    border-bottom: 1px solid #3bc4a1;
+    color: #3bc4a1;
+    line-height: 1.3;
+    text-decoration: none;
+  }
+}
+
+.CheckBoxErrorMessage {
+  background-color: #3bc4a1;
+  color: #ffff;
+  font-size: 12px;
+  margin-top: 10px;
+  padding: 6px 0;
+  text-align: center;
+}
+
+.ErrorMessage {
+  bottom: -17px;
+  color: #3bc4a1;
+  font-size: 12px;
+  left: 0;
+  position: absolute;
+}
+
+.Highlighted {
+  color: #3bc4a1;
+  font-weight: 700;
+}

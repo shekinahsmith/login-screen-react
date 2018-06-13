@@ -1,0 +1,24 @@
+.Form {
+  .FormInputWrapper {
+    margin-bottom: 30px;
+  }
+
+
+  .FormLink {
+    font-size: 12px;
+    text-align: center;
+
+    a {
+      color: #384141;
+    }
+  }
+}
+
+.FormMessageAlert {
+  background-color:  #3bc4a1;
+  color: #ffff;
+  margin: 10px 0;
+  font-size: 12px;
+  padding: 6px 0;
+  text-align: center;
+}
