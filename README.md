@@ -10,7 +10,7 @@ I used this [login screen design](https://dribbble.com/shots/4612955-Recombee-Si
   - using clone:
    `git clone git@github.com:shekinahsmith/login-screen-react.git`
 2. Ensure that you're using Node 10(+)
-  #### Via NPM 
+  #### Via NVM 
   - `nvm install 10`
   - `nvm use 10`
   
